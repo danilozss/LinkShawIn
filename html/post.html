@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkShawIn</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/fyQ7Sfxq/raider-logo-final.png">
+  </head>
+
+  <body>
+  <script src="script.js"></script>
+
+<div class="header">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/html/index.html">Home</a></li>
+                <li><a href="/html/jobs.html">Jobs Available</a></li>
+                <li><a href="/html/students.html">Application for Students</a></li>
+                <li class="header2">
+                  <label for="admin-menu-slc" class="admin-menu-btn" ></label>
+                  <input type="checkbox" name="admin-menu-slc" id="admin-menu-slc">
+                  <ul class="admin-menu">
+                    <li><a href="account.html">Create An Account</a></li>
+                    <li><a href="#">Login</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+    <main>
+        <form id="jobForm">
+            <div class="form-group">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter job title" required>
+            </div>
+            <div class="form-group">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" placeholder="Enter company name" required>
+            </div>
+            <div class="form-group">
+                <label for="jobLocation">Location:</label>
+                <input type="text" id="jobLocation" name="jobLocation" placeholder="Enter job location" required>
+            </div>
+            <div class="form-group">
+                <label for="jobType">Job Type:</label>
+                <select id="jobType" name="jobType" required>
+                    <option value="">Select job type</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                    <option value="contract">Contract</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" name="jobDescription" placeholder="Describe the job responsibilities..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">Contact Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter contact email" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Shaw High School. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

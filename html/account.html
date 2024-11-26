@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkShawIn</title>
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/fyQ7Sfxq/raider-logo-final.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <script src="account.js"></script>
+
+    <div class="header">
+      <header>
+        <input type="checkbox" id="bars-check">
+        <label for="bars-check" class="bars-btn"><i class="fa-solid fa-bars"></i></label>
+        <nav>
+          <ul class="cl-nav">
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/jobs.html">Jobs Available</a></li>
+            <Li><a href="/html/students.html">Application for Students</a></Li>
+            <li><a href="account.html">Create An Account</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+          <ul class="op-nav">
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/jobs.html">Jobs Available</a></li>
+            <li><a href="/html/students.html">Application for Students</a></li>
+            <li class="header2">
+              <label for="admin-menu-slc" class="admin-menu-btn" ></label>
+              <input type="checkbox" name="admin-menu-slc" id="admin-menu-slc">
+              <ul class="admin-menu">
+                <li><a href="account.html">Create An Account</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="container">
+      <div class="form-container">
+        <h1>Create Your Account</h1>
+
+        <!-- Create Account Form -->
+        <form id="createForm">
+
+          <div class="form-group">
+            <label for="create-username">First & Last Name</label>
+            <input type="text" id="create-username" placeholder="Type your First and Last name here..." required />
+          </div>
+          
+          <div class="form-group">
+            <label for="create-username">Username</label>
+            <input type="text" id="create-username" placeholder="Choose a username" required />
+          </div>
+
+          <div class="form-group">
+            <label for="create-email">Email</label>
+            <input type="email" id="create-email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="create-password">Password</label>
+            <input type="password" id="create-password" placeholder="Choose a password" required />
+          </div>
+
+          <div class="form-group">
+            <label for="create-password-confirm">Confirm Password</label>
+            <input type="password" id="create-password-confirm" placeholder="Confirm your password" required />
+          </div>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <p id="message"></p>
+
+        <div class="switch-form">
+          <p>Already have an account? <a href="login.html">Log In</a></p>
+        </div>
+      </div>
+    </div>
+ 
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Shaw High School. All rights reserved.</p>
+    </footer>
+  </body>
+
+</html>
