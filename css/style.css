@@ -17,7 +17,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #003355;
+    background-color: #011a2a;
     border-radius: 2px;
 }
 
@@ -185,13 +185,14 @@ label {
 }
 
 .admin-menu {
-    height: 0px;
     width: 200px;
+    grid-template-columns: 200px;
     background-color: #003366;
     display: none;
     translate: -171.51px 18px;
     border: 1px solid black;
     border-radius: 0 0 0 10px;
+    overflow: hidden;
 }
 
 #admin-menu-slc {
@@ -199,8 +200,6 @@ label {
 }
 
 .admin-menu li {
-    display: flex;
-    width: 180;
     background: #01478c;
     border: 1px solid black;
     cursor: pointer;
@@ -216,7 +215,13 @@ label {
 }
 
 input#admin-menu-slc:checked~.admin-menu {
-    display: block;
-    height: 150px;
+    display: grid;
 }
-
+.op-nav li:not(.header2){
+    padding:15px;
+    border-radius: 3px;
+    transition: background-color .3s linear;
+}
+.op-nav li:not(.header2):hover{
+    background-color: #021f3d;
+}
