@@ -23,14 +23,15 @@ body {
 
 .header {
     background-color: #003366;
-    padding: 30px;
+    padding: 20px;
     text-align: left;
     margin-top: 0;
     border-bottom: 2px solid rgb(10, 10, 10);
 }
 
 .header2 {
-    float: right;
+    position: absolute;
+    right: 0;
     width: 0;
     height: 0;
 }
@@ -83,32 +84,39 @@ body {
 .cl-nav, .cl-nav *{
     display:none;
 }
+.op-nav{
+    position: relative;
+    display: flex;
+}
 
 @media (max-width: 556px){
     .bars-btn{
-        display:block;
+        display: block;
     }
     .cl-nav *{
         display: flex;
     }
     .op-nav{
+        display: none ;
+    }
+    ::-webkit-scrollbar{
         display: none;
     }
 }
 
+.op-nav li{
+    padding: 15px 0;
+    margin: 0 10px;
+}
+
+.op-nav li a{
+    padding: 15px;
+    line-height: 15px;
+}
 
 nav ul {
     list-style-type: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    display: inline;
-    margin-right: 20px;
 }
 
 nav ul li a {
@@ -154,7 +162,7 @@ h3 {
     color: #003366;
 }
 
-section {
+.home {
     padding: 2em 3em 2em 3em;
     margin: 2rem 0;
     background-color: #B3D9FF;
@@ -165,26 +173,18 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: static;
     width: 100%;
     bottom: 0;
 }
 
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
 .admin-menu-btn {
+    display: block;
     color: red;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background-color: white;
     translate: -75% -10px;
-    margin: 0;
 }
 
 .admin-menu {
@@ -192,7 +192,7 @@ label {
     grid-template-columns: 225px;
     background-color: #003366;
     display: none;
-    translate: -196.51px 18px;
+    translate: -187.51px 20px;
     border: 1px solid black;
     border-radius: 0 0 0 10px;
     overflow: hidden;
@@ -208,11 +208,6 @@ label {
     cursor: pointer;
 }
 
-.admin-menu li a {
-    line-height: 40px;
-    padding-left: 10px;
-}
-
 .admin-menu li:hover {
     background-color: #003366;
 }
@@ -221,7 +216,6 @@ input#admin-menu-slc:checked~.admin-menu {
     display: grid;
 }
 .op-nav li:not(.header2){
-    padding:15px;
     border-radius: 3px;
     transition: background-color .3s linear;
 }

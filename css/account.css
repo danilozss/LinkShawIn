@@ -19,7 +19,7 @@ footer {
     border-top: 1px solid rgb(10, 10, 10);
 }
 
-label {
+.label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
@@ -35,7 +35,8 @@ label {
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
-    margin: 20px auto;
+    margin: 100px auto;
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -54,7 +55,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-label {
+.label {
     font-size: 14px;
     margin-bottom: 8px;
     display: block;
