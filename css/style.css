@@ -89,6 +89,12 @@ body {
     display: flex;
 }
 
+.home {
+    padding: 2em 3em 2em 3em;
+    margin: 2rem 0;
+    background-color: #B3D9FF;
+}
+
 @media (max-width: 556px){
     .bars-btn{
         display: block;
@@ -101,6 +107,11 @@ body {
     }
     ::-webkit-scrollbar{
         display: none;
+    }
+    .home {
+        padding: 5em 3em;
+        margin: 2rem 0;
+        background-color: #B3D9FF;
     }
 }
 
@@ -160,12 +171,6 @@ h3 {
     font-size: 2rem;
     margin: .5em 0 .5em 0;
     color: #003366;
-}
-
-.home {
-    padding: 2em 3em 2em 3em;
-    margin: 2rem 0;
-    background-color: #B3D9FF;
 }
 
 footer {
