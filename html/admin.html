@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkShawIn</title>
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="../css/admin.css" >
     <link rel="icon" type="image/png" href="https://i.postimg.cc/fyQ7Sfxq/raider-logo-final.png">
   </head>
 
   <body>
-  <script src="script.js"></script>
+  <script src="../javascript/admin.js"></script>
 
   <div class="header">
     <header>
@@ -18,20 +18,23 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="jobs.html">Jobs Available</a></li>
           <li><a href="students.html">Application for Students</a></li>
-          <li class="header2">
-            <a href="post.html">Post Submission</a>
-            <a href="admin.html">Admin</a>
-          </li>
         </ul>
       </nav>
     </header>
   </div>
 
     <!-- Home Section -->
-    <section id="home">
-
+    <section id="jobRequests">
+      <p>Loading job submissions...</p>
     </section>
 
+    <div class="admin-container">
+      <h1 class="admin-title">Admin Dashboard</h1>
+      <div id="job-requests">
+        <!-- Job cards will load dynamically here -->
+        <p class="no-requests">No job requests at the moment.</p>
+      </div>
+    </div>
 
 
     <!-- Footer -->

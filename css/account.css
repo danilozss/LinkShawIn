@@ -26,7 +26,6 @@ label {
 }
 
 
-/* Additional Styling for Account Creation Page */
 .container {
     background: #fff;
     padding: 30px;
@@ -69,7 +68,7 @@ input {
 }
 
 button {
-    background-color: #003366; /* Matching header color */
+    background-color: #003366; 
     color: white;
     padding: 12px;
     border: none;
