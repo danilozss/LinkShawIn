@@ -1,4 +1,4 @@
-body {
+html,body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -6,6 +6,9 @@ body {
     color: #003366;
     overflow-y:scroll;
     overflow-x:hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 ::-webkit-scrollbar{
@@ -30,6 +33,7 @@ body {
 }
 
 .header2 {
+    translate: 10px 0;
     float: right;
     width: 0;
     height: 0;
@@ -64,7 +68,7 @@ body {
 }
 
 .cl-nav li a{
-    width: 200px;
+    width: 100%;
 }
 
 .cl-nav li:hover{
@@ -84,7 +88,7 @@ body {
     display:none;
 }
 
-@media (max-width: 556px){
+@media (max-width: 600px){
     .bars-btn{
         display:block;
     }
@@ -104,11 +108,18 @@ nav ul {
 
 nav ul li {
     display: inline;
+    padding: 0;
 }
 
-nav ul li a {
+nav ul.op-nav li:not(.header2, .header2 > *) {
     display: inline;
-    margin-right: 20px;
+    padding: 15px 0px;
+    margin-right: 10px;
+}
+
+nav ul.op-nav li a {
+    display: inline;
+    padding: 15px 20px;
 }
 
 nav ul li a {
@@ -165,9 +176,7 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: static;
     width: 100%;
-    bottom: 0;
 }
 
 
@@ -206,7 +215,7 @@ label {
     background: #01478c;
     border: 1px solid black;
     cursor: pointer;
-    padding: 0%;
+    padding: 10px;
     margin: 0%;
 }
 
@@ -228,10 +237,13 @@ input#admin-menu-slc:checked~.admin-menu {
     display: grid;
 }
 .op-nav li:not(.header2){
-    padding:15px;
     border-radius: 3px;
     transition: background-color .3s linear;
 }
 .op-nav li:not(.header2):hover{
     background-color: #021f3d;
+}
+
+main{
+    flex: 1;
 }

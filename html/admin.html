@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkShawIn</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin.css" >
     <link rel="icon" type="image/png" href="https://i.postimg.cc/fyQ7Sfxq/raider-logo-final.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
 
   <body>
@@ -13,28 +15,45 @@
 
   <div class="header">
     <header>
+      <input type="checkbox" id="bars-check">
+      <label for="bars-check" class="bars-btn"><i class="fa-solid fa-bars"></i></label>
       <nav>
-        <ul>
+        <ul class="cl-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs Available</a></li>
+          <Li><a href="students.html">Application for Students</a></Li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+        <ul class="op-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="jobs.html">Jobs Available</a></li>
           <li><a href="students.html">Application for Students</a></li>
+          <li class="header2">
+            <label for="admin-menu-slc" class="admin-menu-btn" ></label>
+            <input type="checkbox" name="admin-menu-slc" id="admin-menu-slc">
+            <ul class="admin-menu">
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
   </div>
 
     <!-- Home Section -->
-    <section id="jobRequests">
-      <p>Loading job submissions...</p>
-    </section>
+    <main>
+      <section id="jobRequests">
+        <p>Loading job submissions...</p>
+      </section>
 
-    <div class="admin-container">
-      <h1 class="admin-title">Admin Dashboard</h1>
-      <div id="job-requests">
-        <!-- Job cards will load dynamically here -->
-        <p class="no-requests">No job requests at the moment.</p>
+      <div class="admin-container">
+        <h1 class="admin-title">Admin Dashboard</h1>
+        <div id="job-requests">
+          <!-- Job cards will load dynamically here -->
+          <p class="no-requests">No job requests at the moment.</p>
+        </div>
       </div>
-    </div>
+    </main>
 
 
     <!-- Footer -->

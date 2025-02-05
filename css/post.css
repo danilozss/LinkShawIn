@@ -1,0 +1,70 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: auto;
+    min-height: 20px;
+    cursor: text;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+input{
+    height: 25px;
+    margin-bottom: 5px;
+    width: 400px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.5);
+}
+
+select{
+    height: 25px;
+    margin-bottom: 5px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+select:focus, input:focus, textarea:focus{
+    outline: 2px solid rgb(19, 19, 73);
+}
+
+select:has(option[value|=""]:checked){
+    color: rgba(100,100,100, .8);
+}
+
+*[value]:not([value|=""]){
+    color: black;
+}
+
+.job-form{
+    margin: 20px auto;
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+
+button{
+    margin-top: 8px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px){
+    input{
+        width: 40vw;
+    }
+}

@@ -5,35 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkShawIn</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/post.css">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/fyQ7Sfxq/raider-logo-final.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
 
   <body>
   <script src="../javascript/post.js"></script>
 
-<div class="header">
+  <div class="header">
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs Available</a></li>
-                <li><a href="students.html">Application for Students</a></li>
-                <li class="header2">
-                  <label for="admin-menu-slc" class="admin-menu-btn" ></label>
-                  <input type="checkbox" name="admin-menu-slc" id="admin-menu-slc">
-                  <ul class="admin-menu">
-                    <li><a href="login.html">Login</a></li>
-                  </ul>
-                </li>
+      <input type="checkbox" id="bars-check">
+      <label for="bars-check" class="bars-btn"><i class="fa-solid fa-bars"></i></label>
+      <nav>
+        <ul class="cl-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs Available</a></li>
+          <Li><a href="students.html">Application for Students</a></Li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+        <ul class="op-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs Available</a></li>
+          <li><a href="students.html">Application for Students</a></li>
+          <li class="header2">
+            <label for="admin-menu-slc" class="admin-menu-btn" ></label>
+            <input type="checkbox" name="admin-menu-slc" id="admin-menu-slc">
+            <ul class="admin-menu">
+              <li><a href="login.html">Login</a></li>
             </ul>
-        </nav>
+          </li>
+        </ul>
+      </nav>
     </header>
-</div>
+  </div>
     <main>
-        <form id="jobForm">
+        <form id="jobForm" class="job-form">
             <div class="form-group">
               <label for="jobTitle">Job Title:</label>
-              <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter job title" required>
+              <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter job title" pattern="[A-Za-z]" title="Only A-Z a-z character acceptable" required>
             </div>
             <div class="form-group">
               <label for="companyName">Company Name:</label>
@@ -46,7 +56,7 @@
             <div class="form-group">
               <label for="jobType">Job Type:</label>
               <select id="jobType" name="jobType" required>
-                <option value="">Select job type</option>
+                <option value="" hidden>-Select job type-</option>
                 <option value="full-time">Full-time</option>
                 <option value="part-time">Part-time</option>
                 <option value="contract">Contract</option>
@@ -54,7 +64,7 @@
             </div>
             <div class="form-group">
               <label for="jobDescription">Job Description:</label>
-              <textarea id="jobDescription" name="jobDescription" placeholder="Describe the job responsibilities..." required></textarea>
+              <textarea id="jobDescription" name="jobDescription" placeholder="Describe the job responsibilities..." required oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px';"></textarea>
             </div>
             <div class="form-group">
               <label for="contactEmail">Contact Email:</label>
@@ -68,6 +78,25 @@
     <footer>
       <p>&copy; 2024 Shaw High School. All rights reserved.</p>
     </footer>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('jobForm');
+            form.addEventListener('submit', function(event) {
+                let isFormValid = true;
+                form.querySelectorAll('input').forEach(function(element) {
+                    if (element.required && !element.checkValidity()) {
+                        element.style.backgroundColor = 'rgba(255,0,0,0.1)';
+                        isFormValid = false;
+                    } else {
+                        element.style.backgroundColor = '';
+                    }
+                });
+                if (!isFormValid) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
