@@ -5,11 +5,12 @@ label {
 }
 
 main{
-    margin: 3% auto;
-    height: fit-content;
-    width: 340px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .container {
     background: #fff;
@@ -18,7 +19,8 @@ main{
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    box-sizing: border-box;
+    height: 400px;
+    margin: 10px;
 }
 
 h1 {
@@ -26,11 +28,6 @@ h1 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #003366;
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
 }
 
 .form-group {

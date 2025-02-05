@@ -68,3 +68,9 @@ button{
         width: 40vw;
     }
 }
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

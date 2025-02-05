@@ -10,9 +10,6 @@
     margin: auto;
 }
 
-.bg-header{
-    text-align: center;
-}
 
 form {
     background-color: #ffffff; 
@@ -34,7 +31,7 @@ form input[type="email"],
 form input[type="password"], 
 form textarea, 
 form select {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #cccccc;
@@ -64,4 +61,16 @@ form button:hover {
     form {
         padding: 15px;
     }
+    main{
+        margin: 10px;
+    }
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2em;
+    align-items: center;
 }
