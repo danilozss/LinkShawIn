@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           `;
   
           jobsContainer.appendChild(jobCard);
+          jobContainer.appendChild(document.createElement("hr"));
         });
   
         // Add event listeners to "Apply" buttons
